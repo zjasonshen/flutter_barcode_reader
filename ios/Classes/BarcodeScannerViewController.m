@@ -71,7 +71,7 @@
 
 - (void)startScan {
     NSError *error;
-    [self.scanner startScanningWithResultBlock:^(NSArray<AVMetadataMachineReadableCodeObject *> *codes) {
+    [self.scanner startScanningWithCamera: MTBCameraFront resultBlock:^(NSArray<AVMetadataMachineReadableCodeObject *> *codes) {
         [self.scanner stopScanning];
          AVMetadataMachineReadableCodeObject *code = codes.firstObject;
         if (code) {
